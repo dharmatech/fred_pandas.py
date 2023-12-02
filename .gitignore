@@ -1,38 +1,6 @@
-/deposits_withdrawals_operating_cash.pkl
-/DGS10.pkl
+*.pkl
 /fred-days-since-larger-or-smaller copy.py
 /fred-days-since-larger-or-smaller.py
 /fred_pandas copy 2.py
 /fred_pandas copy.py
-/H41RESH4ENWW.pkl
-/H41RESPPALDJNWW.pkl
-/H41RESPPALDKNWW.pkl
-/RRPONTSYD.pkl
-/SWPT.pkl
-/TERMT.pkl
-/WALCL.pkl
-/WAOAL.pkl
-/WDFOL.pkl
-/WDTGAL.pkl
-/WFCDA.pkl
-/WLAD.pkl
-/WLCFLL.pkl
-/WLCFLPCL.pkl
-/WLCFLSCL.pkl
-/WLCFLSECL.pkl
-/WLCFOCEL.pkl
-/WLDACLC.pkl
-/WLFN.pkl
-/WLODL.pkl
-/WLODLL.pkl
-/WLRRAL.pkl
-/WORAL.pkl
-/WSHOBL.pkl
-/WSHOFADSL.pkl
-/WSHOICL.pkl
-/WSHOMCB.pkl
-/WSHONBIIL.pkl
-/WSHONBNL.pkl
-/WUDSHO.pkl
-/WUPSHO.pkl
 /__pycache__
