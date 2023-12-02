@@ -1,6 +1,4 @@
 *.pkl
-/fred-days-since-larger-or-smaller copy.py
-/fred-days-since-larger-or-smaller.py
 /fred_pandas copy 2.py
 /fred_pandas copy.py
 /__pycache__
