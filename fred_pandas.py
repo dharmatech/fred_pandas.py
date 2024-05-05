@@ -55,3 +55,40 @@ def update_records(series, observation_start=None):
 
         return df
 # ----------------------------------------------------------------------
+def load_records(series, observation_start=None, update=False):
+
+    path = f'{series}.pkl'
+
+    if os.path.isfile(path):
+
+        print(f'Found {path}. Importing.')
+
+        df = pd.read_pickle(path)
+
+        if update == False:
+            return df
+
+        recent_date = df['date'].iloc[-2]
+
+        print(f'Second most recent date: {recent_date}')
+
+        new_records = download_series_after(series, recent_date)
+
+        existing_records = df[df['date'] < recent_date]
+
+        new_df = pd.concat([existing_records, new_records], ignore_index=True)
+
+        new_df.to_pickle(path)
+
+        return new_df
+
+    else:
+
+        print(f'Using observation_start={observation_start}.')
+
+        df = download_series_after(series, observation_start)
+
+        df.to_pickle(path)
+
+        return df
+# ----------------------------------------------------------------------

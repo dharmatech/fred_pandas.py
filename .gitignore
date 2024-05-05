@@ -1,4 +1,5 @@
 *.pkl
+/* copy*.py
 /fred_pandas copy 2.py
 /fred_pandas copy.py
 /__pycache__
