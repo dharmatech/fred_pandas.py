@@ -21,6 +21,9 @@ def download_series_after(series, observation_start=None):
         print(f'Downloaded {len(df)} records.')
         return df
 # ----------------------------------------------------------------------
+# update_records is deprecated.
+# Use load_records instead.
+# ----------------------------------------------------------------------
 def update_records(series, observation_start=None):
 
     path = f'{series}.pkl'
