@@ -1,6 +1,7 @@
 import os
 import requests
 import pandas as pd
+import pathlib
 
 # ----------------------------------------------------------------------
 def download_series_after(series, observation_start=None):
@@ -58,9 +59,11 @@ def update_records(series, observation_start=None):
 
         return df
 # ----------------------------------------------------------------------
-def load_records(series, observation_start=None, update=False):
+def load_records(series, observation_start=None, update=False, pkl_path='pkl'):
 
-    path = f'{series}.pkl'
+    # path = f'{series}.pkl'
+
+    path = os.path.join(pkl_path, f'{series}.pkl')
 
     if os.path.isfile(path):
 
@@ -91,7 +94,20 @@ def load_records(series, observation_start=None, update=False):
 
         df = download_series_after(series, observation_start)
 
+        # Ensure path to pkl file exists
+
+        pathlib.Path(os.path.dirname(path)).mkdir(parents=True, exist_ok=True)
+
         df.to_pickle(path)
 
         return df
+
 # ----------------------------------------------------------------------
+
+# get series name from command line
+
+if __name__ == '__main__':
+    import sys
+    series = sys.argv[1]
+    df = load_records(series=series, update=True)
+    print(df)
